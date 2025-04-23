@@ -2,12 +2,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notifications/firebase_options.dart';
 import 'package:flutter_notifications/home_page.dart';
-import 'package:flutter_notifications/notification_controller.dart';
+import 'package:flutter_notifications/services/notification_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  await NotificationController.initializeRemoteNotifications(debug: true);
+  await NotificationController.initializeLocalNotifications(debug: true);
+  await NotificationController.initializeEventListeners();
   runApp(const MyApp());
 }
 
