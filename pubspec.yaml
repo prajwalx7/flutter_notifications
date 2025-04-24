@@ -37,6 +37,10 @@ dependencies:
   awesome_notifications: ^0.10.1
   awesome_notifications_fcm: ^0.10.1
   firebase_core: ^3.13.0
+  google_sign_in: ^6.3.0
+  cloud_firestore: ^5.6.6
+  firebase_auth: ^5.5.2
+  lottie: ^3.3.1
 
 dev_dependencies:
   flutter_test:
@@ -60,9 +64,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/relax.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
